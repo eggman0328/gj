@@ -1,0 +1,10 @@
+/* pages/component/bookList/bookList.wxss */
+.b-book-list {
+  padding: 30rpx 20rpx;
+}
+.b-book-list .col-3 {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  margin: 0 0.16% 40rpx 0.16%;
+}

@@ -1,0 +1,10 @@
+<!--pages/component/banner/banner.wxml-->
+<view class='b-banner'>
+  <view class='banner-img'>
+    <image class='img' mode='aspectFill' src='{{bannerImgSrc}}'></image>
+  </view>
+  <view class='banner-title'>
+    <text class='name'>{{bannerName}}</text>
+    <text class='count'>{{bannerCount}}人看过</text>
+  </view>
+</view>

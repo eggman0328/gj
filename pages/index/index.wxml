@@ -1,0 +1,43 @@
+<view class='navigator'>
+  <b-navigator title='果酱'>
+    <view slot='special' class='bg-navigator' hidden='{{!animateAction}}'>
+      <view class='wave l'></view>
+      <view class='wave m'></view>
+      <view class='wave r'></view>
+    </view>
+  </b-navigator>
+</view>
+<view class='wrap' wx:if='{{!groupAction}}'>
+  <view class='banner'>
+    <b-banner bannerImgSrc='http://img.v2.babystory365.com/wechatapp/guojiang/img-demobanner.png'></b-banner>
+  </view>
+  <view class='wrap-tab'>
+    <view class='tab-nav'>
+      <b-tab id='home-tab' tabStateInit='{{tabState}}' bindtabSelect='onTabSelect' tabName='{{tabName}}' ></b-tab>
+    </view>
+    <view class='tab-container'>
+      <view class='container-item {{tabState === 0 ? "tab-now" : ""}}'>
+        <view class='book-desc'>
+          <image class='img' mode='aspectFit' style='width:750rpx;height:563rpx;' src='http://img.v2.babystory365.com/wechatapp/guojiang/img-bookdesc-01.jpg'></image>
+          <image class='img' mode='aspectFit' style='width:750rpx;height:1387rpx; margin-top: 100rpx;' src='http://img.v2.babystory365.com/wechatapp/guojiang/img-bookdesc-02.jpg'></image>
+        </view>
+      </view>
+      <view class='container-item {{tabState === 1 ? "tab-now" : ""}}'>
+        <b-book-list listData='{{listData}}' lockRule='{{lockRule}}'></b-book-list>
+      </view>
+    </view>
+    <view class='wrap-bottom'>
+      <view class='group-action' wx:if='{{isGroup}}'>
+        <view class='action-btn group'>您已发起拼团，请等待拼团结果</view>
+      </view>
+      <view class='group-action' wx:else>
+        <view class='action-btn buy' bindtap='onPay'>¥188立即购买</view>
+        <view class='action-btn group' bindtap='onGroup'>¥158两人拼团</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='group' wx:else>
+  <b-group bindgroupBack='onGroupBack'></b-group>
+</view>
+

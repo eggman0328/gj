@@ -1,0 +1,30 @@
+/* pages/plugin/bookListItem/bookListItem.wxss */
+.book {
+  position: relative;
+  width: 210rpx;
+  margin: 0 auto;
+}
+.book .cover {
+  position: relative;
+  width: 210rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.book .cover .lock {
+  display: none;
+  position: absolute;
+  right: 8rpx;
+  bottom: 8rpx;
+  width: 74rpx;
+  height: 74rpx;
+  background: url(https://img.v2.babystory365.com/wechatapp/guojiang/icon-book-lock.png) no-repeat center center/contain;
+}
+.book.locked .cover .lock {
+  display: block;
+}
+.book .name {
+  line-height: 48rpx;
+  font-size: 24rpx;
+  color: #7c7c7c;
+}

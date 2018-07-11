@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reader/reader",
+    
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  }
+}

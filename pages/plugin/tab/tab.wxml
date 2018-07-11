@@ -1,0 +1,8 @@
+<!--pages/plugin/tab/tab.wxml-->
+<view class='b-tab'>
+  <view bindtap='_onSelect' data-index='{{index}}' class='tab-item {{tabState === index ? "tab-now" : ""}}' wx:key="tab-item" wx:for="{{tabName}}" wx:for-item="item">
+    <text class='item-name'>{{item}}</text>
+    <view class='item-line' wx:if='{{index < tabName.length - 1}}'></view>
+  </view>
+  <view class='tab-line' style=' width: {{100/tabName.length/2}}%; left: {{(0.25+tabState)*(100/tabName.length)}}%;'></view>
+</view>

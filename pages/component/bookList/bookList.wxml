@@ -1,0 +1,6 @@
+<!--pages/component/bookList/bookList.wxml-->
+<view class='b-book-list'>
+  <view class='col-3' wx:for='{{listData.list}}' wx:key="list-item" wx:for-item="item">
+    <list-item name='{{item.name}}' version='{{item.version}}' cover='{{item.cover_url}}' json='{{item.json_url}}' isLock='{{lockRule >= index ? false : true }}'></list-item>
+  </view>
+</view>

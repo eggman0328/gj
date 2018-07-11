@@ -1,0 +1,21 @@
+<!--
+  k-swiper
+  author: kevin
+  version: 2018.02.26
+-->
+
+<view class='k-swiper {{_showPN? "" : " action-hide" }}' style="width:{{swiperWidth}}px;">
+  <view class="swiper-wrap {{swiperType}}-mode" style="width: {{swiperType==='slide' ? swiperWidth*(swiperImg.length+2) : swiperWidth}}px; transform: translate({{swiperType==='slide' ? -swiperWidth*(_swiperIndex + 1) : 0}}px); transition-duration: {{_swiperDuration}}ms;" bindtap='_wrapAction'>
+    <view class="swiper-slide" wx:if="{{swiperType==='slide'}}" style="width:{{swiperWidth}}px;">
+      <image class="swiper-img" wx:key="swiper-img" wx:for="{{swiperImg[swiperImg.length-1]}}" src="{{swiperImg[swiperImg.length-1][index]}}" mode="aspectFit"></image>
+    </view>
+    <view class="swiper-slide{{ ( index <= _swiperIndex) ? ' swiper-played' : ' swiper-unplay'}}" wx:key="swiper-slide" wx:for="{{swiperImg}}" wx:for-item="img" style="width:{{swiperWidth}}px; transition-duration: {{_swiperDuration}}ms">
+      <image class="swiper-img" wx:key="swiper-img" wx:for="{{img}}" wx:for-item="url" src="{{url}}" mode="aspectFit"></image>
+    </view>
+    <view class="swiper-slide" wx:if="{{swiperType==='slide'}}" style="width:{{swiperWidth}}px;">
+      <image class="swiper-img" wx:key="swiper-img" wx:for="{{swiperImg[0]}}" src="{{swiperImg[0][index]}}" mode="aspectFit"></image>
+    </view>
+  </view>
+  <view class="swiper-prev" bindtap="_pagePrev" hidden="{{(!swiperLoop)&&(_swiperIndex === 0)}}"></view>
+  <view class="swiper-next" bindtap="_pageNext" hidden="{{(!swiperLoop)&&(_swiperIndex === swiperImg.length - 1)}}"></view>
+</view>

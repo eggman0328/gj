@@ -1,0 +1,172 @@
+.navigator {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.navigator .bg-navigator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40rpx;
+}
+.navigator .bg-navigator .wave {
+  position: relative;
+}
+.navigator .bg-navigator .wave.l {
+  margin-left: 100rpx;
+}
+.navigator .bg-navigator .wave.m {
+  margin-left: -200rpx;
+}
+.navigator .bg-navigator .wave.r {
+  margin-left: -400rpx;
+}
+.navigator .bg-navigator .wave.l::before, .navigator .bg-navigator .wave.l::after{
+  content: "";
+  position: absolute;
+  width: 1300rpx;
+  height: 1300rpx;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 48%;
+  transform: translate(0, 30%) rotate(0);
+  animation: rotate 7s linear -8s infinite;
+  z-index: 10;
+}
+.navigator .bg-navigator .wave.l::after {
+    border-radius: 45%;
+    background-color: rgba(255, 255, 255, .4);
+    transform: translate(0, 30%) rotate(0);
+    animation: rotate 10s linear -2s infinite;
+    z-index: 20;
+}
+.navigator .bg-navigator .wave.m::before, .navigator .bg-navigator .wave.m::after{
+  content: "";
+  position: absolute;
+  width: 1200rpx;
+  height: 1200rpx;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 44%;
+  transform: translate(0, 30%) rotate(0);
+  animation: rotate 15s linear infinite;
+  z-index: 10;
+}
+.navigator .bg-navigator .wave.m::after {
+    border-radius: 46%;
+    background-color: rgba(255, 255, 255, .4);
+    transform: translate(0, 30%) rotate(0);
+    animation: rotate 20s linear -4s infinite;
+    z-index: 20;
+}
+.navigator .bg-navigator .wave.r::before, .navigator .bg-navigator .wave.r::after{
+  content: "";
+  position: absolute;
+  width: 1100rpx;
+  height: 1100rpx;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 47%;
+  transform: translate(0, 30%) rotate(0);
+  animation: rotate 12s linear infinite;
+  z-index: 10;
+}
+.navigator .bg-navigator .wave.r::after {
+    border-radius: 45%;
+    background-color: rgba(255, 255, 255, .5);
+    transform: translate(0, 30%) rotate(0);
+    animation: rotate 8s linear -3s infinite;
+    z-index: 20;
+}
+@keyframes rotate {
+  0% {
+    border-radius: 45%;
+    transform: translate(10%, 1%) rotate(360deg);
+  }
+  50% {
+    border-radius: 50%;
+    transform: translate(0, 4%) rotate(180deg);
+  } 
+  100% {
+    border-radius: 45%;
+    transform: translate(10%, 1%) rotate(360deg);
+  }
+}
+.wrap {
+  margin-top: 164rpx;
+}
+.banner {
+  width: 100%;
+}
+.wrap-tab {
+  position: relative;
+  width: 100%;
+  border-top: 10rpx solid #f0efef;
+  padding-bottom: 98rpx;
+}
+.wrap-tab .tab-nav {
+  position: relative;
+  width: 100%;
+  height: 85rpx;
+}
+.wrap-tab .tab-container {
+  position: relative;
+  width: 100%;
+}
+.wrap-tab .tab-container .container-item {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+.wrap-tab .tab-container .container-item.tab-now {
+  display: block;
+}
+.book-desc {
+  position: relative;
+  width: 100%;
+  padding: 72rpx 0 110rpx 0;
+}
+.wrap-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+}
+.wrap-bottom .group-action {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.wrap-bottom .group-action .action-btn {
+  position: relative;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  line-height: 98rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+}
+.wrap-bottom .group-action .action-btn.buy {
+  background: #ffb136;
+}
+.wrap-bottom .group-action .action-btn.group {
+  background: #fe582a;
+}
+.group {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

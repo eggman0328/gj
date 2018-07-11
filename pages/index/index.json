@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "b-navigator": "../component/navigator/navigator",
+    "b-banner": "../component/banner/banner",
+    "b-tab": "../plugin/tab/tab",
+    "b-book-list": "../component/bookList/bookList",
+    "b-group": "../component/group/group"
+  }
+}

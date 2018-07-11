@@ -1,0 +1,4 @@
+<view class="b-navigator">
+  <text class='b-text'>{{title}}</text>
+  <slot name="special"></slot>
+</view>

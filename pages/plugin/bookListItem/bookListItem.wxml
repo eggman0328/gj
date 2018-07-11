@@ -1,0 +1,7 @@
+<!--pages/plugin/bookListItem/bookListItem.wxml-->
+<view class='book{{isLock ? " locked" : ""}}' bindtap='read'>
+  <view class='cover' style='background:url({{cover}}) no-repeat center center/cover;'>
+    <view class='lock'></view>
+  </view>
+  <text class='name'>{{name}}</text>
+</view>

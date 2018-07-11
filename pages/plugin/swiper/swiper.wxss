@@ -1,0 +1,104 @@
+/*** 
+ * k-swiper
+ * author: kevin
+ * version: 2018.02.26
+ */
+
+.k-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.k-swiper .swiper-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.k-swiper .swiper-wrap.paper-mod {
+  overflow: hidden;
+  transform-style:preserve-3d;
+}
+
+.k-swiper .swiper-wrap .swiper-slide {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+
+.k-swiper .swiper-wrap.slide-mode .swiper-slide {
+  position: relative;
+  float: left;
+}
+
+.k-swiper .swiper-wrap.paper-mode .swiper-slide {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%,0);
+}
+.k-swiper .swiper-wrap.paper-mode .swiper-slide.swiper-played {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0,0);
+  opacity: 1;
+}
+.k-swiper .swiper-wrap.paper-mode .swiper-slide.swiper-unplay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%,0);
+  opacity: 0;
+}
+
+.k-swiper .swiper-wrap .swiper-slide .swiper-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.k-swiper .swiper-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  margin: -40rpx 0 0 0;
+  transform: translate(30rpx,0) translateZ(0);
+  background: url(http://img.v2.babystory365.com/images/ybbh5/icon/icon-swiper-prev.png) no-repeat center center/contain;
+  z-index: 10;
+  transition-duration: 300ms;
+}
+.k-swiper.action-hide .swiper-prev {
+  left: -120rpx;
+  transition-duration: 300ms;
+}
+
+.k-swiper .swiper-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  margin: -40rpx 0 0 0;
+  transform: translate(-30rpx,0) translateZ(0);
+  background: url(http://img.v2.babystory365.com/images/ybbh5/icon/icon-swiper-next.png) no-repeat center center/contain;
+  z-index: 10;
+  transition-duration: 300ms;
+}
+.k-swiper.action-hide .swiper-next {
+  right: -120rpx;
+  transition-duration: 300ms;
+}
+

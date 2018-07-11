@@ -1,0 +1,28 @@
+<!--pages/reader/reader.wxml-->
+<view class='b-reader' style='width:{{pageStyle.width}}px;height:{{pageStyle.height}}px;transform:translate(-50%,-50%) rotate({{pageStyle.rotate}}deg);background:#ffffff;'>
+   <k-swiper 
+    id="book-swiper" 
+    swiperImg="{{imgUrl}}" 
+    swiperWidth="{{pageStyle.width}}" 
+    initIndex="{{initIndex}}" 
+    swiperIndex="{{swiperIndex}}" 
+    swiperType="{{swiperType}}" 
+    bindonprev="onPrev" 
+    bindonnext="onNext"
+    bindwrapAction="wrapAction">
+  </k-swiper> 
+  <view class='reader-action{{actionState ? "" : " fadeOut"}}{{actionShow ? "" : " hide"}}'>
+    <view class='reader-head'>
+      <text class='title'>{{bookTitle}}</text>
+      <text class='pages'>{{pageNow}} / {{pageTotal}}</text>
+    </view>
+    <view class='reader-play' bindtap='hideAction'>
+      <view class='play-icon' hidden='{{!playInit}}'></view>
+    </view>
+    <view class='reader-bottom'>
+      <view bindtap='repeatAction' class='active repeat{{repeat ? " state1": " state2" }}'>重头开始</view>
+      <view bindtap='autoplayAction' class='active autoplay{{autoplay ? " state1": " state2 off" }}'>{{autoplayText}}</view>
+      <view bindtap='voiceAction' class='active back'>返回主页</view>
+    </view>
+  </view>
+</view>

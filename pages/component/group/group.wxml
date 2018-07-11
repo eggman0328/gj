@@ -1,0 +1,42 @@
+<view class='group'>
+  <view class='group-count' wx:if='{{groupType === 1}}'>
+    <view class='container'>
+      <view class='pack'>
+        <view class='info'>
+          <view class='time'>
+            <text class='item'>2</text>
+            <text class='item'>3</text>
+            <text class='dot'>:</text>
+            <text class='item'>2</text>
+            <text class='item'>3</text>
+            <text class='dot'>:</text>
+            <text class='item'>2</text>
+            <text class='item'>3</text>
+          </view>
+          <view class='tip'>距离拼团结束时间还有</view>
+        </view>
+        <view class='active'>
+          <view class='people'>
+            <text class='text'>只差1人</text>
+            <view class='btn'>立即邀请好友拼团</view>
+          </view>
+        </view>
+      </view>
+      <view class='active-rule'>
+        <view bindtap='showRule' class='link'>拼团须知</view>
+      </view>
+      <view class='active-back'>
+        <view bindtap='groupBack' class='link'>返回书单</view>
+      </view>
+    </view>
+  </view>
+  <view class='group-fail' wx:else>
+    <view class='container'>
+      <view class='pack'></view>
+    </view>
+  </view>
+  <view class='group-rule' hidden='{{!groupRule}}'>
+    <view bindtap='hideRule' class='filter'></view>
+    <view class='container'></view>
+  </view>
+</view>
